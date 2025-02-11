@@ -1,4 +1,4 @@
-OpenMM implementation of Mpipi-Recharged residue level potential: https://www.biorxiv.org/content/10.1101/2024.07.26.605370v1
+OpenMM implementation of Mpipi-Recharged residue level potential: https://pubs.acs.org/doi/10.1021/acscentsci.4c01617
 
 Installation instructions:
 
