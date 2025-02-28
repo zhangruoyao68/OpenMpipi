@@ -6,6 +6,10 @@ setup(
     author="Kieran Russell",
     description="OpenMM implementation of the Mpipi recharged forcefield",
     packages=find_packages(),
+    include_package_data=True, 
+    package_data={
+        "OpenMpipi": ["data_files/*"],  
+    },
     install_requires=[
         "numpy>=1.20",      
         "scipy>=1.7",
