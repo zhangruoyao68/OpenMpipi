@@ -1,13 +1,13 @@
 from OpenMpipi import *
 
 RRR_seq = 10*'R'
-RRR_chain = IDP('R6', RRR_seq)
+RRR_chain = IDP('R10', RRR_seq)
 
 RNA_seq = 10*'U'
-RNA_chain = RNA('U8', RNA_seq)
+RNA_chain = RNA('U10', RNA_seq)
 
 chains = {
-    RRR_chain:4000,
+    RRR_chain:1000,
     RNA_chain:1000
 }
 
