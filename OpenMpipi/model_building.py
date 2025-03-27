@@ -39,6 +39,9 @@ def calculate_target_box_vectors(chain_info,
     short_side_length = (target_volume / long_side_scale_factor) ** (1/3)
     short_side_length = short_side_length.in_units_of(unit.nanometer) / unit.nanometer
 
+    print(f'Aspect raio of the box: {long_side_scale_factor}:1:1')
+    print(f'Side length of the short side: {short_side_length:.2f} nm')
+
     return short_side_length * np.array([[long_side_scale_factor, 0, 0], 
                                          [0, 1, 0], 
                                          [0, 0, 1]]) * unit.nanometer
