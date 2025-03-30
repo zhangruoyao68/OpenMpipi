@@ -5,7 +5,7 @@ a1lcd_WT_sequence = 'GSMASASSSQRGRSGSGNFGGGRGGGFGGNDNFGRGGNFSGRGGFGGSRGGGGYGGSGD
 a1lcd_chain = IDP("A1LCD_WT", a1lcd_WT_sequence)
 
 chains = {
-    a1lcd_chain:2000
+    a1lcd_chain:1000
 }
 
 # default density: 0.1 g/cm^3
@@ -17,4 +17,4 @@ chains = {
 build_and_equilibrate_model(chains, equi_time=100*unit.nanosecond, 
                             pulling_time=20*unit.nanosecond,
                             long_side_scale_factor=1, 
-                            target_density=0.0817556*unit.gram/unit.centimeter**3)
+                            target_density=0.01*unit.gram/unit.centimeter**3)

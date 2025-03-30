@@ -4,7 +4,7 @@ import numpy as np
 
 # setting some parameters
 
-n_copies = 200 # copies of protein to add
+n_copies = 1000 # copies of protein to add
 T = 300 # temperature in K
 csx = 150 # [NaCl] in mM
 final_box_length = 100 # dimension of the final cubic box in nm
@@ -21,7 +21,7 @@ model = app.Modeller(topology, positions) # init the Modeller object, to combine
 
 # find a suitable cubic number to add the required number of copies
 total_to_add = n_copies 
-cubes = [(i, i**3) for i in range(4, 11)]
+cubes = [(i, i**3) for i in range(4, 21)]
 for item in cubes:
     i, cubed = item
     if total_to_add < cubed:
