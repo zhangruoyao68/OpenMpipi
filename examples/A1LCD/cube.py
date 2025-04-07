@@ -5,7 +5,7 @@ a1lcd_WT_sequence = 'GSMASASSSQRGRSGSGNFGGGRGGGFGGNDNFGRGGNFSGRGGFGGSRGGGGYGGSGD
 a1lcd_chain = IDP("A1LCD_WT", a1lcd_WT_sequence)
 
 chains = {
-    a1lcd_chain:1000
+    a1lcd_chain:200
 }
 
 # default density: 0.1 g/cm^3

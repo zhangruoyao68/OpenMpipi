@@ -24,3 +24,5 @@ var/
 *.xml
 *.dat
 *.pdb
+
+*.npz
