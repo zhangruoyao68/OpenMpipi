@@ -16,5 +16,6 @@ chains = {
 
 build_and_equilibrate_model(chains, equi_time=100*unit.nanosecond, 
                             pulling_time=20*unit.nanosecond,
-                            long_side_scale_factor=1, 
+                            long_side_scale_factor=1,
+                            T=300*unit.kelvin,
                             target_density=0.01*unit.gram/unit.centimeter**3)
