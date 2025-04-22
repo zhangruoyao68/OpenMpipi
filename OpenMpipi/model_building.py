@@ -166,6 +166,8 @@ def equilibrate_slab(model,
     }
 
     print('Building mpipi system...', flush=True)
+    print('temperature:', T.value_in_unit(unit.kelvin), 'K')
+    print('ionic strength:', csx, 'mM')
     # Calls your second-code function get_mpipi_system
     system = get_mpipi_system(
         np.array(model.positions), 
@@ -259,7 +261,7 @@ def equilibrate_slab(model,
     simulation.step(int(equi_time/(10*unit.femtosecond)))
     
     # Final state
-    state = simulation.context.getState(getPositions=True)
+    state = simulation.context.getState(getPositions=True, enforcePeriodicBox=True)
     positions = state.getPositions()
     app.PDBFile.writeFile(model.topology, positions, open('./equi_model.pdb', 'w'))
     simulation.saveState('equi_state.xml')
